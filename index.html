@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heladería Amy — Melilla</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#inicio" class="logo">Amy</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sabores">Sabores</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- INICIO + SOBRE NOSOTROS -->
+    <section id="inicio" class="hero">
+      <h1 class="hero-title">Heladería<br>Amy</h1>
+      <p class="hero-subtitle">Helado artesanal en el corazón de Melilla</p>
+    </section>
+
+    <section id="sobre-nosotros" class="about">
+      <h2>Sobre nosotros</h2>
+      <p>
+        En Heladería Amy elaboramos cada sabor a diario, con fruta de temporada
+        y recetas propias. Nada de mezclas industriales: solo ingredientes
+        reales y mucho mimo en cada tarrina.
+      </p>
+    </section>
+
+    <!-- CATÁLOGO / SABORES -->
+    <section id="sabores" class="flavors">
+      <h2>Nuestros sabores</h2>
+      <ul class="flavor-grid">
+        <li class="flavor-card flavor-fresa">
+          <h3>Fresa natural</h3>
+          <p>Fresas frescas trituradas con nata suave.</p>
+        </li>
+        <li class="flavor-card flavor-pistacho">
+          <h3>Pistacho</h3>
+          <p>Pistacho tostado molido en casa.</p>
+        </li>
+        <li class="flavor-card flavor-mango">
+          <h3>Mango</h3>
+          <p>Mango maduro, intenso y muy cremoso.</p>
+        </li>
+        <li class="flavor-card flavor-chocolate">
+          <h3>Chocolate negro</h3>
+          <p>Cacao 70% con un toque de sal.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="location">
+      <h2>Ubicación y horarios</h2>
+      <div class="location-grid">
+        <div>
+          <h3>Dónde estamos</h3>
+          <p>Melilla, España</p>
+        </div>
+        <div>
+          <h3>Horario</h3>
+          <p>Todos los días<br>11:00 – 22:00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+      <h2>Contacto</h2>
+      <form id="contactForm" class="contact-form">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+      <p id="formStatus" class="form-status" role="status"></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Heladería Amy — Melilla</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
