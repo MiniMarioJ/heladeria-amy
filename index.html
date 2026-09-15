@@ -1,62 +1,8 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Heladería Amy en Melilla: helados artesanales, ingredientes honestos y sabores que alegran el día." />
-    <title>Heladería Amy · Melilla</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Heladería Amy, inicio">amy<span>·</span></a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">Menú <span>+</span></button>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="#sabores">Sabores</a><a href="#nosotros">Nuestra historia</a><a href="#visitanos">Visítanos</a>
-        <a class="nav-cta" href="#contacto">Haz tu pedido</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" id="inicio">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> Helado artesanal · Melilla</p>
-          <h1>Un poco de<br /><em>felicidad</em><br />en cada bola.</h1>
-          <p class="hero-text">Helados hechos despacio, con ingredientes de verdad y combinaciones que no encontrarás en otro lugar.</p>
-          <div class="hero-actions"><a class="button button-dark" href="#sabores">Descubrir sabores <b>→</b></a><a class="text-link" href="#visitanos">Cómo llegar <span>↗</span></a></div>
-        </div>
-        <div class="hero-art" aria-label="Ilustración de tres bolas de helado">
-          <div class="sun"></div><div class="blob blob-pink"></div><div class="blob blob-yellow"></div>
-          <div class="cone"><i class="scoop scoop-green"></i><i class="scoop scoop-pink"></i><i class="scoop scoop-yellow"></i><b></b></div>
-          <p>Hecho con<br />mucho cariño</p>
-        </div>
-      </section>
-
-      <section class="marquee" aria-label="Valores de Heladería Amy"><div>Artesanal <span>✦</span> Fresco cada día <span>✦</span> Ingredientes honestos <span>✦</span> Mucho sabor <span>✦</span> Artesanal <span>✦</span></div></section>
-
-      <section class="flavours section" id="sabores">
-        <div class="section-heading"><p class="eyebrow">Nuestros favoritos</p><h2>Sabores que te<br /><em>hacen volver.</em></h2><p>Una selección que cambia con la temporada y siempre tiene algo nuevo que probar.</p></div>
-        <div class="flavour-grid">
-          <article class="flavour-card strawberry"><span class="number">01</span><div class="flavour-icecream"></div><p class="flavour-type">Cremoso</p><h3>Fresa & nata</h3><p>Fresas maduras, nata suave y pequeños trocitos de galleta.</p></article>
-          <article class="flavour-card pistachio"><span class="number">02</span><div class="flavour-icecream"></div><p class="flavour-type">El favorito</p><h3>Pistacho siciliano</h3><p>Intenso, cremoso y con pistacho tostado de verdad.</p></article>
-          <article class="flavour-card mango"><span class="number">03</span><div class="flavour-icecream"></div><p class="flavour-type">Sorbete</p><h3>Mango & lima</h3><p>Fruta vibrante, lima fresca y cero complicaciones.</p></article>
-        </div>
-        <a class="button button-light" href="#contacto">Quiero ver la carta completa <b>→</b></a>
-      </section>
-
-      <section class="story section" id="nosotros">
-        <div class="story-visual"><div class="stamp">AMY<br /><span>desde</span><br />2026</div><div class="cherry one"></div><div class="cherry two"></div><div class="stem"></div></div>
-        <div class="story-copy"><p class="eyebrow">Nuestra filosofía</p><h2>Pequeñas cosas,<br /><em>bien hechas.</em></h2><p>En Amy creemos que un helado bueno no necesita una lista interminable de ingredientes. Usamos fruta, leche, chocolate y frutos secos de calidad; después, paciencia.</p><p>Somos una heladería de barrio pensada para tu paseo de tarde, una charla larga y esos antojos que merecen la pena.</p><a class="text-link" href="#visitanos">Conoce nuestro rincón <span>→</span></a></div>
-      </section>
-
-      <section class="visit" id="visitanos"><div><p class="eyebrow"><span></span> Te esperamos</p><h2>Tu parada dulce<br />en <em>Melilla.</em></h2><p>Ven, prueba algo nuevo y quédate un rato.</p></div><div class="visit-card"><p class="visit-label">Heladería Amy</p><p>Calle del Sabor, 12<br />52001 · Melilla</p><hr /><div><p><b>Martes — Domingo</b><br />12:00 — 22:30</p><a href="#contacto" aria-label="Contactar con Heladería Amy">↗</a></div></div></section>
-
-      <section class="contact section" id="contacto"><div><p class="eyebrow">Pedidos y eventos</p><h2>¿Preparamos algo<br /><em>especial?</em></h2><p>Escríbenos para encargos, celebraciones o simplemente para saludar.</p></div><form id="contact-form"><label>Tu nombre<input required name="name" type="text" placeholder="Cómo te llamas" /></label><label>Tu email<input required name="email" type="email" placeholder="tu@email.com" /></label><label>Cuéntanos<input required name="message" placeholder="¿En qué podemos ayudarte?" /></label><button class="button button-dark" type="submit">Enviar mensaje <b>→</b></button><p class="form-status" aria-live="polite"></p></form></section>
-    </main>
-    <footer><a class="brand" href="#inicio">amy<span>·</span></a><p>Helados artesanales hechos en Melilla.</p><p>© <span id="year"></span> Heladería Amy</p></footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Heladería Amy en Melilla: helados, batidos y copas con mucho sabor."><title>Heladería Amy · Melilla</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body>
+<header><a class="brand" href="#inicio">amy<span>·</span></a><button class="menu" aria-expanded="false">Menú <b>+</b></button><nav><a href="#sabores">Sabores</a><a href="#galeria">Galería</a><a href="#visitanos">Visítanos</a><a class="nav-button" href="#contacto">Contactar</a></nav></header>
+<main><section class="hero" id="inicio"><div class="hero-copy"><p class="eyebrow"><i></i> Heladería artesanal · Melilla</p><h1>Tu momento<br>más <em>dulce.</em></h1><p>Helados, batidos y copas para disfrutar sin prisa. Ven a descubrir tus sabores favoritos en Heladería Amy.</p><div class="actions"><a class="button dark" href="#sabores">Ver sabores <b>→</b></a><a class="underlined" href="#visitanos">Cómo llegar ↗</a></div></div><div class="hero-image"><img src="assets/helado-3.jpg" alt="Copa de helado de Heladería Amy"><div class="round-label">HECHO CON<br>MUCHO AMOR</div></div></section>
+<div class="strip">HELADOS ARTESANALES <span>✦</span> COPAS ESPECIALES <span>✦</span> SABORES PARA TODOS <span>✦</span> HELADOS ARTESANALES <span>✦</span></div>
+<section class="section flavours" id="sabores"><div class="intro"><p class="eyebrow">La carta de Amy</p><h2>Elige tu<br><em>favorito.</em></h2><p>Desde los clásicos de siempre hasta sabores para los más golosos. Pregunta por los sabores del día.</p></div><div class="flavour-grid"><article class="flavour kinder"><span>01</span><h3>Kinder</h3><p>Chocolate y avellana</p></article><article class="flavour oreo"><span>02</span><h3>Oreo</h3><p>Galleta y crema</p></article><article class="flavour pistachio"><span>03</span><h3>Pistacho</h3><p>Cremoso e intenso</p></article><article class="flavour mint"><span>04</span><h3>Menta<br>chocolate</h3><p>Fresco y crujiente</p></article><article class="flavour cloud"><span>05</span><h3>Nube</h3><p>Suave y divertido</p></article><article class="flavour hippo"><span>06</span><h3>Happy hippo</h3><p>Una locura de sabor</p></article><article class="flavour nougat"><span>07</span><h3>Turrón</h3><p>El toque tradicional</p></article><article class="flavour vanilla"><span>08</span><h3>Vainilla</h3><p>El clásico perfecto</p></article><article class="flavour chocolate"><span>09</span><h3>Chocolate</h3><p>Para amantes del cacao</p></article></div></section>
+<section class="gallery section" id="galeria"><div class="gallery-title"><p class="eyebrow">Así se vive Amy</p><h2>Mucho más que<br><em>un helado.</em></h2></div><div class="gallery-grid"><img class="large" src="assets/helado-3.jpg" alt="Copa especial de Heladería Amy"><img src="assets/helado-2.jpg" alt="Copa de helado de fresa"><img src="assets/helado-4.jpg" alt="Helados artesanales en vitrina"><img src="assets/helado-5.jpg" alt="Vitrina con sabores de helado"><img class="wide" src="assets/helado-1.jpg" alt="Vitrina de Heladería Amy"><img src="assets/helado-6.jpg" alt="Sabores de Heladería Amy"><img src="assets/helado-7.jpg" alt="Helado servido en Heladería Amy"></div></section>
+<section class="visit" id="visitanos"><div><p class="eyebrow"><i></i> Ven a vernos</p><h2>Tu parada dulce<br>en <em>Melilla.</em></h2><p>Te esperamos para compartir una bola, una copa o un buen rato.</p></div><div class="visit-card"><p class="card-title">Heladería Amy</p><p>Calle Pedro Navarro nº18<br>Melilla</p><hr><p><b>Horario</b><br>Consulta nuestras redes para conocer el horario actual.</p><a class="button dark" href="https://www.google.com/maps/search/?api=1&query=Calle+Pedro+Navarro+18%2C+Melilla" target="_blank" rel="noopener">Abrir en Maps <b>↗</b></a></div></section>
+<section class="contact section" id="contacto"><div><p class="eyebrow">Hablemos</p><h2>¿Te apetece<br><em>algo dulce?</em></h2><p>Escríbenos o llámanos para cualquier consulta, encargo o celebración.</p></div><div class="contact-details"><a href="tel:+34951005306"><small>Teléfono</small>951 005 306</a><a href="mailto:Hafidatieb1212@gmail.com"><small>Correo electrónico</small>Hafidatieb1212@gmail.com</a><a href="https://www.instagram.com/heladeriaamy/" target="_blank" rel="noopener"><small>Instagram</small>@heladeriaamy ↗</a></div></section></main><footer><a class="brand" href="#inicio">amy<span>·</span></a><p>Heladería Amy · Calle Pedro Navarro nº18, Melilla</p><p>© <span id="year"></span></p></footer><script src="script.js"></script></body></html>
