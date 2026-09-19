@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Encarga tu tarta de Heladería Amy en Melilla: elige sabor, día y hora, paga online y recógela en tienda.">
+<title>Encarga tu tarta · Heladería Amy · Melilla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260919-1">
+<link rel="stylesheet" href="tienda.css?v=1">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html#inicio">amy<span>·</span></a>
+  <nav>
+    <a href="tienda.html" aria-current="page">Encargos</a>
+    <a href="index.html#sabores">Sabores</a>
+    <a href="index.html#galeria">Galería</a>
+    <a href="index.html#visitanos">Visítanos</a>
+    <a class="nav-button" href="index.html#contacto">Contactar</a>
+  </nav>
+  <div class="header-actions">
+    <button class="cart-button" type="button" id="open-cart" aria-haspopup="dialog">
+      Mi pedido <span class="cart-count" id="cart-count">0<span class="visually-hidden"> tartas en el pedido</span></span>
+    </button>
+    <button class="menu" aria-expanded="false">Menú <b>+</b></button>
+  </div>
+</header>
+
+<div id="notice-area"></div>
+
+<main>
+  <section class="shop-hero">
+    <div>
+      <p class="eyebrow"><i></i> Tartas y encargos · Melilla</p>
+      <h1>Tu tarta,<br>lista para <em>celebrar.</em></h1>
+      <p class="lead">Elige tu tarta, dinos cuándo pasas a recogerla y paga online. Recogida en tienda, en Calle Pedro Navarro nº18.</p>
+    </div>
+    <ol class="how">
+      <li><div><strong>Elige tu tarta</strong><span>Sabor, tamaño y dedicatoria si quieres.</span></div></li>
+      <li><div><strong>Reserva día y hora</strong><span id="lead-note">Consulta la antelación mínima al elegir la fecha.</span></div></li>
+      <li><div><strong>Paga con tarjeta</strong><span>Pago seguro con Stripe, también con Apple Pay o Google Pay.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="shop" id="tartas" aria-labelledby="catalog-title">
+    <div class="shop-head">
+      <h2 id="catalog-title">Elige tu<br><em>tarta.</em></h2>
+      <p>¿Buscas algo distinto, sin gluten o para muchas personas? Llámanos al <a href="tel:+34951005306" id="phone-link">951 005 306</a> y lo preparamos contigo.</p>
+    </div>
+    <div id="catalog" class="product-grid" aria-live="polite"></div>
+    <p class="state" id="catalog-state">Cargando tartas…</p>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="index.html#inicio">amy<span>·</span></a>
+  <p>Heladería Amy · Calle Pedro Navarro nº18, Melilla</p>
+  <p><a href="legal.html" style="color:inherit">Condiciones y privacidad</a> · © <span id="year"></span></p>
+</footer>
+
+<!-- Elegir tamaño y cantidad de una tarta -->
+<dialog class="dialog-pick" id="pick-dialog" aria-labelledby="pick-title">
+  <form method="dialog" id="pick-form">
+    <div class="dialog-head">
+      <h3 id="pick-title"></h3>
+      <button class="icon-close" type="button" data-close aria-label="Cerrar">×</button>
+    </div>
+    <p class="dialog-desc" id="pick-desc"></p>
+
+    <fieldset>
+      <legend>Tamaño</legend>
+      <div id="pick-sizes"></div>
+    </fieldset>
+
+    <div class="field">
+      <label for="pick-dedication">Dedicatoria en la tarta (opcional)</label>
+      <input id="pick-dedication" maxlength="60" autocomplete="off" placeholder="Ej.: Feliz cumpleaños, Lucía">
+      <p class="hint">Hasta 60 caracteres.</p>
+    </div>
+
+    <div class="field">
+      <span id="pick-qty-label" style="font-size:13px;font-weight:700">Cantidad</span>
+      <div class="qty" role="group" aria-labelledby="pick-qty-label">
+        <button type="button" id="pick-minus" aria-label="Quitar una">−</button>
+        <output id="pick-qty" aria-live="polite">1</output>
+        <button type="button" id="pick-plus" aria-label="Añadir una">+</button>
+      </div>
+    </div>
+
+    <div class="dialog-total"><span>Subtotal</span><strong id="pick-total"></strong></div>
+    <button class="button dark full" type="submit" id="pick-add">Añadir al pedido <b>+</b></button>
+  </form>
+</dialog>
+
+<!-- Pedido, fecha de recogida y datos -->
+<dialog class="drawer" id="cart-dialog" aria-labelledby="cart-title">
+  <form class="drawer-form" id="checkout-form" novalidate>
+    <div class="drawer-top">
+      <h2 id="cart-title">Mi pedido</h2>
+      <button class="icon-close" type="button" data-close aria-label="Cerrar el pedido">×</button>
+    </div>
+    <div class="drawer-body" id="cart-body"></div>
+    <div class="drawer-foot" id="cart-foot" hidden>
+      <div class="total-row"><span>Total</span><strong id="cart-total"></strong></div>
+      <button class="button dark full" type="submit" id="pay-button">Pagar con tarjeta <b>→</b></button>
+      <p class="secure">Pago seguro con Stripe. Nosotros nunca vemos los datos de tu tarjeta.</p>
+    </div>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
+<script src="tienda.js?v=1"></script>
+</body>
+</html>
